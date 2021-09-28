@@ -1,0 +1,76 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - helo alma
+    - hey alma! How are you?
+    - hehe alma
+    - hehe
+    - hello
+    - hola alma
+    - hi
+    - hello there
+    - alma, my girl! 
+    - how are you?
+    - good morning
+    - good evening, alma
+    - moin
+    - dear alma, moin!
+    - hey there
+    - let's go
+    - alma, can you help me?
+    - someone there?
+    - i need help
+    - hey, anyone here?
+    - hey dude
+    - is the shop open?
+    - the shop is working?
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - good afternoon, alma
+
+- intent: goodbye
+  examples: |
+    - cu
+    - see you!
+    - bye, alma
+    - nice meeting you!
+    - need to leave 
+    - need to go, alma, bye!
+    - see ya later
+    - good by
+    - cee you later
+    - take care!
+    - good night
+    - bye
+    - goodbye
+    - good bye, alma
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: discount
+  examples: | 
+    - hey! I also want the discounts
+    - what about the discounts :)
+    - i also want discounts
+    - are there discounts?
+    - what about the 20% off?
+    - how much off today?
+    - can i get 20% of this product?
+    - alma, what about the discount!
+    - discount, alma?
+    - alma, can i have some off on this product?
+    - 20% off, really?
+    - tell me how can I get 20% off
+    - which products have 15% off?
+    - alma, any active discounts
+    - let's talk about discounts
+    - yes, alma i want that off
+    - discount, my boi
+    - discount, man!
+

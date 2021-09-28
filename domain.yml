@@ -1,0 +1,32 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - discount
+
+actions:
+  - action_tell_discounts
+
+responses:
+  utter_greet:
+  - text: "Hey, I'm Alma from JackShoes 😃. Welcome! How can I help you?"
+    quick_replies:
+      - title: "New Discounts (It's limited 👀)"
+        payload: "/discount"
+      - title: "Shoes: Savage series 😎"
+        payload: "/greet"
+      - title: "All Products 🛍️"
+        payload: "/greet"
+      - title: "Contact Us 😊"
+        payload: "/greet"
+      - title: "👉 Follow Us"
+        payload: "/greet"
+
+  utter_goodbye:
+  - text: "Nice talking to you 😄. Hope we helped and solved all your doubts!"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

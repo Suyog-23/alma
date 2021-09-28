@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(34, 34, 34);">
+
+  <style>
+   .rw-conversation-container .rw-client{
+     background-color: orange;
+   }
+   .rw-conversation-container .rw-header{
+     background-color: orange;
+   }
+   .rw-conversation-container .rw-reply{
+     background-color: orange;
+     border: none;
+   }
+   .rw-launcher{
+     background-color: orange;
+   }
+   element.style{
+     stroke: orange;
+   }
+ 
+  </style>
+
+  <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+      // Replace 1.x.x with the version that you want
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "en" },
+            initPayload:"/greet",
+            socketUrl: "http://localhost:5005",
+            title:"Welcome to JackShoes 👋",
+            hideWhenNotConnected : "false",
+            // add other props here
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
+  </script>
+
+    
+      <!-- <div id="rasa-chat-widget" data-websocket-url="http://localhost:5005"></div>
+<script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script> -->
+      
+</body>
+</html>
