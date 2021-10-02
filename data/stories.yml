@@ -11,3 +11,8 @@ stories:
   steps:
   - intent: discount
   - action: action_tell_discounts
+
+- story: savage_series_only
+  steps:
+  - intent: savage_series
+  - action: action_savage_series

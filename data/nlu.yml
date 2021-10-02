@@ -12,7 +12,9 @@ nlu:
     - hola alma
     - hi
     - hello there
-    - alma, my girl! 
+    - alma, my girl!
+    - who are you?
+    - alma, what do you do 
     - how are you?
     - good morning
     - good evening, alma
@@ -74,3 +76,33 @@ nlu:
     - discount, my boi
     - discount, man!
 
+- intent: savage_series
+  examples: |
+    - i want to know about the savage series
+    - savage series
+    - alma, show me the savage series 
+    - here for the savage 
+    - need information about the savage shoes
+    - what does the savage series have for me?
+    - alma, any great shoes series here?
+    - series savage
+    - what about the savage
+    - series
+    - savage, alma!
+    - need to look into to the savage series
+    - alma, tell me about the savage series
+    - tell me about that new series
+    - what's that new series man
+    - waiting for the savage series!
+
+- intent: all_prodcts
+  examples: |
+    - hey alma, what do you have?
+    - what all do you sell?
+    - products you sell
+    - show me all shoes
+    - what kind of shoes do you have?
+    - what do you sell?
+    - alma what do you have?
+    - hey, show everything!
+    

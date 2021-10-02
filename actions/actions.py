@@ -8,7 +8,8 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
-
+import time
+import webbrowser
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -74,7 +75,7 @@ class ActionHelloWorld(Action):
                 {
                     "title": "Jack Ticon",
                     "subtitle": "NOthing better!",
-                    "image_url": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ymx1ZSUyMHNob2VzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+                    "image_url": "https://media.istockphoto.com/photos/running-shoes-picture-id1249496770?b=1&k=20&m=1249496770&s=170667a&w=0&h=_SUv4odBqZIzcXvdK9rqhPBIenbyBspPFiQOSDRi-RI=",
                     "buttons": [
                         {
                     "title": "Purchase on website 🌐",
@@ -99,4 +100,19 @@ class ActionHelloWorld(Action):
 
         dispatcher.utter_message(text="You caught it 👀. ", attachment=test_carousel)
 
+        return []
+
+class ActionSavageSeries(Action):
+
+    def name(self) -> Text:
+        return "action_savage_series"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="The Savage series is here 😎. Only few pieces are left so let's fly fast 🚀...")
+        time.sleep(3)
+        webbrowser.open('https://www.nike.com/in/t/air-zoom-alphafly-next-road-racing-shoes-13jzhr/CI9925-300')
+        
         return []

@@ -4,9 +4,11 @@ intents:
   - greet
   - goodbye
   - discount
+  - savage_series
 
 actions:
   - action_tell_discounts
+  - action_savage_series
 
 responses:
   utter_greet:
@@ -15,7 +17,7 @@ responses:
       - title: "New Discounts (It's limited 👀)"
         payload: "/discount"
       - title: "Shoes: Savage series 😎"
-        payload: "/greet"
+        payload: "/savage_series"
       - title: "All Products 🛍️"
         payload: "/greet"
       - title: "Contact Us 😊"
