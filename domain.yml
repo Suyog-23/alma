@@ -5,6 +5,9 @@ intents:
   - goodbye
   - discount
   - savage_series
+  - payments
+  - refundable
+  - payment_method
 
 actions:
   - action_tell_discounts
@@ -18,8 +21,8 @@ responses:
         payload: "/discount"
       - title: "Shoes: Savage series 😎"
         payload: "/savage_series"
-      - title: "All Products 🛍️"
-        payload: "/greet"
+      - title: "Payments 💸"
+        payload: "/payments"
       - title: "Contact Us 😊"
         payload: "/greet"
       - title: "👉 Follow Us"
@@ -28,6 +31,23 @@ responses:
   utter_goodbye:
   - text: "Nice talking to you 😄. Hope we helped and solved all your doubts!"
 
+  utter_payment:
+  - text: "Jack Shoes keeps complete transparency in billing and payments 😇. How can we help you with this?"
+    buttons:
+    - title: "Is payment refundable?"
+      payload: "/refundable"
+    - title: "Accepted Payment methods"
+      payload: "/payment_method"
+    - title: "Payment FAQ's"
+      payload: "/payment_method"
+    - title: "Other doubts"
+      payload: "/bot_functions"
+
+  utter_refund:
+  - text: "Refund policy is straight and short 🤓. We keep 20% of the total amount and refund the rest. This refund is applicable only in India, Japan, USA, UK, Monaco and Canada. In rest of the countries, this will not be applicable."
+
+  utter_payment_method:
+  - text: "We accept payments through Google Pay, PayPal, MasterCards, Debit and Credit cards and u know what? 😏 Even cash on delivery!"
 
 session_config:
   session_expiration_time: 60

@@ -30,7 +30,7 @@ class ActionHelloWorld(Action):
             "elements": [
                 {
                 "title": "Adidas 2A - JackShoes",
-                "subtitle": "The exclusive Adidas black beast.",
+                "subtitle": "Adidas black beast.",
                 "image_url": "https://rukminim1.flixcart.com/image/714/857/kh9gbrk0-0/shoe/d/t/o/kzi38-7-adidas-black-original-imafxbjfzkzxqxtx.jpeg?q=50",
                 "buttons": [
                     {

@@ -95,14 +95,73 @@ nlu:
     - what's that new series man
     - waiting for the savage series!
 
-- intent: all_prodcts
+- intent: payments
   examples: |
-    - hey alma, what do you have?
-    - what all do you sell?
-    - products you sell
-    - show me all shoes
-    - what kind of shoes do you have?
-    - what do you sell?
-    - alma what do you have?
-    - hey, show everything!
-    
+    - how to pay?
+    - payment options
+    - which payment methods do you accept?
+    - how do I pay
+    - I had a question related to payment
+    - alma, how do I pay man?
+    - Is payment one time?
+    - faq's for payment
+    - Alma, I'm confused about buying
+    - I want to pay
+    - buying options
+    - how to buy a shoes?
+    - is payment refundable?
+    - alma, is cash on dilevery available?
+    - buying can be returned?
+    - is payment to be done in one slot?
+    - emi available?
+    - alma, emi options please
+    - question about payment and billing
+    - billing options
+    - billing details
+    - alma, give my bill
+
+- intent: refundable
+    - is this order refundable?
+    - refund policy
+    - alma, will I get money back?
+    - if I cancel my order, is there money back guarantee
+    - can i know about the refund
+    - refund?
+    - money back guarantee
+    - alma, is this product refundable?
+    - will i get my money back?
+    - alma, tell me about the refund policy
+    - money back if order is cancelled by me?
+    - what if I cancel my orders?
+    - is refund applicable in my country?
+    - which countries have refundable orders?
+    - I need refund 
+
+- intent: payment_method
+    - how can I pay?
+    - payment methods
+    - hey alma, how to pay?
+    - after I buy, how will give the money?
+    - accepted payments
+    - can you tell me about methods of payment?
+    - how do I pay online?
+    - do you accept visa cards?
+    - is mastercard accepted?
+    - paypal?
+    - alma, paytm is allowed
+    - can i pay using google pay?
+    - rupay card works?
+    - is cash on delivery available?
+    - alma, cash on delivery is an option?
+    - are debit cards allowed
+    - credit card, possible?
+    - credit card I have, works for you?
+    - paytm
+    - PayTM
+    - Paypal?
+    - alma, paypal?
+    - Credit cards and debit cards there?
+    - what if I use cash?
+    - cash allowed
+    - cash? paypal? 
+    - do you accept paytm?

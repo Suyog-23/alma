@@ -16,3 +16,18 @@ stories:
   steps:
   - intent: savage_series
   - action: action_savage_series
+
+- story: payment only
+  steps:
+  - intent: payments
+  - action: utter_payment
+
+- story: refundable only
+  steps:
+  - intent: refundable
+  - action: utter_refund
+
+- story: payment method only
+  steps:
+  - intent: payment_method
+  - action: utter_payment_method
