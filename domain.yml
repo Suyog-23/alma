@@ -22,6 +22,7 @@ slots:
 actions:
   - action_tell_discounts
   - action_savage_series
+  - action_submit
 
 responses:
   utter_greet:
@@ -34,7 +35,7 @@ responses:
       - title: "Payments 💸"
         payload: "/payments"
       - title: "Contact Us 😊"
-        payload: "/greet"
+        payload: "/contact_us"
 
   utter_goodbye:
   - text: "Nice talking to you 😄. Hope we helped and solved all your doubts!"
@@ -47,7 +48,7 @@ responses:
     - title: "Accepted Payment methods"
       payload: "/payment_method"
     - title: "Have a related doubt 😲"
-      payload: "/bot_functions"
+      payload: "/contact_us"
 
   utter_refund:
   - text: "Refund policy is straight and short 🤓. We keep 20% of the total amount and refund the rest. This refund is applicable only in India, Japan, USA, UK, Monaco and Canada. In rest of the countries, this will not be applicable."
@@ -63,7 +64,16 @@ responses:
     - title: "Wow, let's shop! 😎"
       payload: "/savage_series"
     - title: "Have a related doubt 😲"
-      payload: "/greet"
+      payload: "/contact_us"
+
+  utter_ask_email:
+  - text: "We won't stop without solving your doubt 😄. Please drop your email-id so that we can contact you back as soon as possible!"
+
+forms:
+  validate_email:
+    email:
+      - type: from_entity
+        entity: email
 
 session_config:
   session_expiration_time: 60

@@ -31,3 +31,4 @@ stories:
   steps:
   - intent: payment_method
   - action: utter_payment_method
+

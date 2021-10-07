@@ -11,7 +11,7 @@ nlu:
     - can you tell me about methods of payment?
     - how do I pay online?
     - do you acc("requested_slot", None)]
-ept visa cards?
+    - ept visa cards?
     - is mastercard accepted?
     - paypal?
     - alma, paytm is allowed

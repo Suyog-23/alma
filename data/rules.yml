@@ -10,15 +10,16 @@ rules:
 - rule: Activate form
   steps:
   - intent: contact_us
-  - active_loop: user_details_form
+  - action: validate_email
+  - active_loop: validate_email
 
 - rule: Submit form
   condition:
   # Condition that form is active.
-  - active_loop: user_details_form
+  - active_loop: validate_email
   steps:
   # Form is deactivated
-  - action: user_details_form
+  - action: validate_email
   - active_loop: null
   - slot_was_set:
     - requested_slot: null

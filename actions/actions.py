@@ -119,20 +119,34 @@ class ActionSavageSeries(Action):
         
         return []
 
-class ValidateQueryForm(FormValidationAction):
+class ValidateUserEmail(Action):
     def name(self) -> Text:
-        return "validate_query_form"
+        return "validate_email"
 
-    def validate_email(
+    def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> List[EventType]:
+        required_slots = ["email"]
+
+        for slot_name in required_slots:
+            if tracker.slots.get(slot_name) is None:
+                # The slot is not filled yet. Request the user to fill this slot next.
+                return [SlotSet("requested_slot", slot_name)]
+
+        # All slots are filled.
+        return [SlotSet("requested_slot", None)]
+
+class ActionSubmit(Action):
+    def name(self) -> Text:
+        return "action_submit"
+
+    def run(
         self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
+        dispatcher,
         tracker: Tracker,
-        domain: DomainDict,
-    ) -> Dict[Text, Any]:
+        domain: "DomainDict",
+    ) -> List[Dict[Text, Any]]:
 
-        if "." and "@" in value:
-            return {"email": value}
-        else:
-            dispatcher.utter_message(template="utter_no_email")
-            return {"email": None}
+        email = tracker.get_slot('email')
+
+        dispatcher.utter_message(text=f"Email recieved! Recorded email was {email}")
