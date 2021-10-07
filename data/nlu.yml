@@ -1,6 +1,37 @@
 version: "2.0"
 
 nlu:
+
+- intent: payment_method
+  examples: |
+    - payment methods available
+    - hey alma, how to pay?
+    - after I buy, how will give the money?
+    - accepted payments
+    - can you tell me about methods of payment?
+    - how do I pay online?
+    - do you acc("requested_slot", None)]
+ept visa cards?
+    - is mastercard accepted?
+    - paypal?
+    - alma, paytm is allowed
+    - can i pay using google pay?
+    - rupay card works?
+    - is cash on delivery available?
+    - alma, cash on delivery is an option?
+    - are debit cards allowed
+    - credit card, possible?
+    - credit card I have, works for you?
+    - paytm
+    - PayTM
+    - Paypal?
+    - alma, paypal?
+    - Credit cards and debit cards there?
+    - what if I use cash?
+    - cash allowed
+    - cash? paypal? 
+    - do you accept paytm?
+
 - intent: greet
   examples: |
     - hey
@@ -121,6 +152,7 @@ nlu:
     - alma, give my bill
 
 - intent: refundable
+  examples: |
     - is this order refundable?
     - refund policy
     - alma, will I get money back?
@@ -137,31 +169,47 @@ nlu:
     - which countries have refundable orders?
     - I need refund 
 
-- intent: payment_method
-    - how can I pay?
-    - payment methods
-    - hey alma, how to pay?
-    - after I buy, how will give the money?
-    - accepted payments
-    - can you tell me about methods of payment?
-    - how do I pay online?
-    - do you accept visa cards?
-    - is mastercard accepted?
-    - paypal?
-    - alma, paytm is allowed
-    - can i pay using google pay?
-    - rupay card works?
-    - is cash on delivery available?
-    - alma, cash on delivery is an option?
-    - are debit cards allowed
-    - credit card, possible?
-    - credit card I have, works for you?
-    - paytm
-    - PayTM
-    - Paypal?
-    - alma, paypal?
-    - Credit cards and debit cards there?
-    - what if I use cash?
-    - cash allowed
-    - cash? paypal? 
-    - do you accept paytm?
+- intent: contact_us
+  examples: |
+    - how to contact the company?
+    - company contact
+    - how to contact
+    - contact us
+    - give me your mobile number
+    - your email?
+    - how can I contact jack
+    - alma, your contact?
+    - how can i get in touch
+    - contact details
+    - i need to contact you
+    - i have a doubt
+    - doubt
+    - can i call you?
+    - get on a call?
+    - i need to contact you
+    - email address?
+    - can I have your email?
+    - i need to talk to someone
+    - talk to a person
+    - any person online?
+    - get me in touch with someone
+    - i have a different concern
+    - my concern is different
+    - alma, i'm different
+
+- intent: user_email
+  examples: |
+    - my email is [suyog@gmail.com](email)
+    - ok, [s@yiu.in](email) here you go
+    - [currsive@currsive.co.in](email)
+    - [simple@suyog.io](email)
+    - email: [suyog@gmail.com](email)
+    - [damn@gmail.com](email)
+    - [okjone@gmail.com](email) is my email
+    - alma, note it down, [fofo@insty.co.in](email)
+    - you can contact me at [giri@giri.com](email)
+    - here you go, [suyog@you.com](email)
+    - ok sure, it is [gun@fun.dev](email)
+    - wait a sec, it goes as [system.co@gio.com](email)
+    - [suyog.savalkar@gunicorn.com](email) is my contact
+    - [contact.gun@gmail.com](email)

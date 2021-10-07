@@ -8,10 +8,12 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
+from rasa_sdk.events import SlotSet, EventType
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk import Action, Tracker, FormValidationAction
+from rasa_sdk.types import DomainDict
 import time
 import webbrowser
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
 
 
 class ActionHelloWorld(Action):
@@ -116,3 +118,21 @@ class ActionSavageSeries(Action):
         webbrowser.open('https://www.nike.com/in/t/air-zoom-alphafly-next-road-racing-shoes-13jzhr/CI9925-300')
         
         return []
+
+class ValidateQueryForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_query_form"
+
+    def validate_email(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+
+        if "." and "@" in value:
+            return {"email": value}
+        else:
+            dispatcher.utter_message(template="utter_no_email")
+            return {"email": None}
